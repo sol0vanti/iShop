@@ -11,6 +11,8 @@ import CoreData
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var emailAddress: String = ""
+    @State private var emailPassword: String = ""
+
 
     var body: some View {
         NavigationStack {
@@ -20,7 +22,14 @@ struct ContentView: View {
                     .font(.headline)
                     .padding(.horizontal, 25)
                 
+                TextField("Password", text: $emailPassword)
+                    .textFieldStyle(.roundedBorder)
+                    .font(.headline)
+                    .padding(.horizontal, 25)
+                    .padding(.top, 15)
+                
                 Button{
+                    guard emailAddress != "" || emailPassword != "" else { return }
                     
                 } label: {
                     Label("Sign in or sign up", systemImage: "shield.lefthalf.filled")
@@ -30,7 +39,7 @@ struct ContentView: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .padding(.horizontal, 25)
-                .padding(.vertical, 15)
+                .padding(.top, 15)
                 //            ============ Nav Bar Styles  ============
                 .navigationTitle("iShop")
             }

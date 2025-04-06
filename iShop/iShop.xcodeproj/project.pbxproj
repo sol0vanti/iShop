@@ -13,7 +13,7 @@
 		704C54D82DA19F7500554C49 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 704C54D72DA19F7500554C49 /* FirebaseDatabase */; };
 		704C54DA2DA19F7500554C49 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 704C54D92DA19F7500554C49 /* FirebaseFirestore */; };
 		7065CA972DA1437C00B43AE4 /* iShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7065CA962DA1437C00B43AE4 /* iShopApp.swift */; };
-		7065CA992DA1437C00B43AE4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7065CA982DA1437C00B43AE4 /* ContentView.swift */; };
+		7065CA992DA1437C00B43AE4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7065CA982DA1437C00B43AE4 /* FirstViewController.swift */; };
 		7065CA9B2DA1437E00B43AE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7065CA9A2DA1437E00B43AE4 /* Assets.xcassets */; };
 		7065CA9E2DA1437E00B43AE4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7065CA9D2DA1437E00B43AE4 /* Preview Assets.xcassets */; };
 		7065CAA02DA1437E00B43AE4 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7065CA9F2DA1437E00B43AE4 /* Persistence.swift */; };
@@ -24,7 +24,7 @@
 		704C54D02DA19E5500554C49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7065CA932DA1437C00B43AE4 /* iShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7065CA962DA1437C00B43AE4 /* iShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iShopApp.swift; sourceTree = "<group>"; };
-		7065CA982DA1437C00B43AE4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7065CA982DA1437C00B43AE4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		7065CA9A2DA1437E00B43AE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7065CA9D2DA1437E00B43AE4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7065CA9F2DA1437E00B43AE4 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				7065CA962DA1437C00B43AE4 /* iShopApp.swift */,
-				7065CA982DA1437C00B43AE4 /* ContentView.swift */,
+				7065CA982DA1437C00B43AE4 /* FirstViewController.swift */,
 				7065CA9A2DA1437E00B43AE4 /* Assets.xcassets */,
 				7065CA9F2DA1437E00B43AE4 /* Persistence.swift */,
 				7065CAA12DA1437E00B43AE4 /* iShop.xcdatamodeld */,
@@ -166,7 +166,7 @@
 			files = (
 				7065CAA02DA1437E00B43AE4 /* Persistence.swift in Sources */,
 				7065CAA32DA1437E00B43AE4 /* iShop.xcdatamodeld in Sources */,
-				7065CA992DA1437C00B43AE4 /* ContentView.swift in Sources */,
+				7065CA992DA1437C00B43AE4 /* FirstViewController.swift in Sources */,
 				7065CA972DA1437C00B43AE4 /* iShopApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

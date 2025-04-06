@@ -20,7 +20,7 @@ struct iShopApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FirstViewController()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

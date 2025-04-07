@@ -3,13 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		704C54D42DA19F7500554C49 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 704C54D32DA19F7500554C49 /* FirebaseAuth */; };
+		704C54D62DA19F7500554C49 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 704C54D52DA19F7500554C49 /* FirebaseCore */; };
+		704C54D82DA19F7500554C49 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 704C54D72DA19F7500554C49 /* FirebaseDatabase */; };
+		704C54DA2DA19F7500554C49 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 704C54D92DA19F7500554C49 /* FirebaseFirestore */; };
 		7065CA972DA1437C00B43AE4 /* iShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7065CA962DA1437C00B43AE4 /* iShopApp.swift */; };
-		7065CA992DA1437C00B43AE4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7065CA982DA1437C00B43AE4 /* ContentView.swift */; };
-		7065CA9B2DA1437E00B43AE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7065CA9A2DA1437E00B43AE4 /* Assets.xcassets */; };
+		7065CA992DA1437C00B43AE4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7065CA982DA1437C00B43AE4 /* AccountViewController.swift */; };
 		7065CA9E2DA1437E00B43AE4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7065CA9D2DA1437E00B43AE4 /* Preview Assets.xcassets */; };
 		7065CAA02DA1437E00B43AE4 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7065CA9F2DA1437E00B43AE4 /* Persistence.swift */; };
 		7065CAA32DA1437E00B43AE4 /* iShop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7065CAA12DA1437E00B43AE4 /* iShop.xcdatamodeld */; };
@@ -18,24 +21,56 @@
 /* Begin PBXFileReference section */
 		7065CA932DA1437C00B43AE4 /* iShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7065CA962DA1437C00B43AE4 /* iShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iShopApp.swift; sourceTree = "<group>"; };
-		7065CA982DA1437C00B43AE4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		7065CA9A2DA1437E00B43AE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7065CA982DA1437C00B43AE4 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		7065CA9D2DA1437E00B43AE4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7065CA9F2DA1437E00B43AE4 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		7065CAA22DA1437E00B43AE4 /* iShop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iShop.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		70483A6B2DA433E30034171F /* Assets */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Assets; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7065CA902DA1437C00B43AE4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				704C54D82DA19F7500554C49 /* FirebaseDatabase in Frameworks */,
+				704C54DA2DA19F7500554C49 /* FirebaseFirestore in Frameworks */,
+				704C54D62DA19F7500554C49 /* FirebaseCore in Frameworks */,
+				704C54D42DA19F7500554C49 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70483A6D2DA433EB0034171F /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				7065CA982DA1437C00B43AE4 /* AccountViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		70483A6E2DA438C40034171F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7065CA9F2DA1437E00B43AE4 /* Persistence.swift */,
+				7065CAA12DA1437E00B43AE4 /* iShop.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		70483A6F2DA438CC0034171F /* AppFunc */ = {
+			isa = PBXGroup;
+			children = (
+				7065CA962DA1437C00B43AE4 /* iShopApp.swift */,
+			);
+			path = AppFunc;
+			sourceTree = "<group>";
+		};
 		7065CA8A2DA1437C00B43AE4 = {
 			isa = PBXGroup;
 			children = (
@@ -55,11 +90,10 @@
 		7065CA952DA1437C00B43AE4 /* iShop */ = {
 			isa = PBXGroup;
 			children = (
-				7065CA962DA1437C00B43AE4 /* iShopApp.swift */,
-				7065CA982DA1437C00B43AE4 /* ContentView.swift */,
-				7065CA9A2DA1437E00B43AE4 /* Assets.xcassets */,
-				7065CA9F2DA1437E00B43AE4 /* Persistence.swift */,
-				7065CAA12DA1437E00B43AE4 /* iShop.xcdatamodeld */,
+				70483A6F2DA438CC0034171F /* AppFunc */,
+				70483A6E2DA438C40034171F /* CoreData */,
+				70483A6D2DA433EB0034171F /* VC */,
+				70483A6B2DA433E30034171F /* Assets */,
 				7065CA9C2DA1437E00B43AE4 /* Preview Content */,
 			);
 			path = iShop;
@@ -89,6 +123,12 @@
 			dependencies = (
 			);
 			name = iShop;
+			packageProductDependencies = (
+				704C54D32DA19F7500554C49 /* FirebaseAuth */,
+				704C54D52DA19F7500554C49 /* FirebaseCore */,
+				704C54D72DA19F7500554C49 /* FirebaseDatabase */,
+				704C54D92DA19F7500554C49 /* FirebaseFirestore */,
+			);
 			productName = iShop;
 			productReference = 7065CA932DA1437C00B43AE4 /* iShop.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +157,9 @@
 				Base,
 			);
 			mainGroup = 7065CA8A2DA1437C00B43AE4;
+			packageReferences = (
+				704C54D22DA19EFB00554C49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 7065CA942DA1437C00B43AE4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -132,7 +175,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7065CA9E2DA1437E00B43AE4 /* Preview Assets.xcassets in Resources */,
-				7065CA9B2DA1437E00B43AE4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +187,7 @@
 			files = (
 				7065CAA02DA1437E00B43AE4 /* Persistence.swift in Sources */,
 				7065CAA32DA1437E00B43AE4 /* iShop.xcdatamodeld in Sources */,
-				7065CA992DA1437C00B43AE4 /* ContentView.swift in Sources */,
+				7065CA992DA1437C00B43AE4 /* AccountViewController.swift in Sources */,
 				7065CA972DA1437C00B43AE4 /* iShopApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +394,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		704C54D22DA19EFB00554C49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		704C54D32DA19F7500554C49 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 704C54D22DA19EFB00554C49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		704C54D52DA19F7500554C49 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 704C54D22DA19EFB00554C49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		704C54D72DA19F7500554C49 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 704C54D22DA19EFB00554C49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		704C54D92DA19F7500554C49 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 704C54D22DA19EFB00554C49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		7065CAA12DA1437E00B43AE4 /* iShop.xcdatamodeld */ = {

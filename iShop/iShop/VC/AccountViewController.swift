@@ -21,7 +21,7 @@ struct CreateAccountViewController: View {
     
     var body: some View {
         VStack {
-            Text(email)
+            Text("Email to use: \(email)")
             SecureField("Password", text: $password)
                 .textFieldStyle(.roundedBorder)
                 .font(.headline)
@@ -43,7 +43,18 @@ struct CreateAccountViewController: View {
                 .padding(.top, 15)
                 
             Button{
-                
+                guard password == confirmPassword && password.isEmpty == false else {
+                    errorText = "Make stronger password or email is incorrect format."
+                    isButtonClicked = true
+                    return
+                }
+                Auth.auth().createUser(withEmail: email, password: password) { result, error in
+                    if error != nil {
+                        print(String(describing: error))
+                    } else {
+                        print("Created successfully new ACC")
+                    }
+                }
             } label: {
                 Label("Create new account", systemImage: "person.circle.fill")
                     .frame(maxWidth: .infinity)
@@ -104,12 +115,10 @@ struct AccountViewController: View {
                     guard emailAddress != "" && emailPassword != "" else {
                         errorText = "The following text fields should be filled."
                         isButtonClicked = true
-                        print("clicked")
                         return
                     }
                     Auth.auth().signIn(withEmail: emailAddress, password: emailPassword) { authResult, error in
                         if error != nil {
-                            print(String(describing: error))
                             navigationPath.append(VCToPresent.signup)
                         } else {
                             navigationPath.append(VCToPresent.login)

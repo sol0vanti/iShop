@@ -17,16 +17,27 @@ struct CreateAccountViewController: View {
     }
 }
 
-struct FirstViewController: View {
+struct MainViewController: View {
+    var body: some View {
+        Text("Hello Byden")
+    }
+}
+
+enum VCToPresent: Hashable {
+    case signup
+    case login
+}
+
+struct AccountViewController: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var emailAddress: String = ""
     @State private var emailPassword: String = ""
     @State private var isButtonClicked: Bool = false
-    @State var path = NavigationPath()
-
+    @State private var errorText: String = ""
+    @State private var navigationPath = NavigationPath()
 
     var body: some View {
-        NavigationStack(path: $path) {
+        NavigationStack(path: $navigationPath) {
             VStack {
                 TextField("Email", text: $emailAddress)
                     .textFieldStyle(.roundedBorder)
@@ -43,7 +54,7 @@ struct FirstViewController: View {
                     .autocorrectionDisabled()
                     .textInputAutocapitalization(.never)
                 
-                Text("The following text fields should be filled.")
+                Text(errorText)
                     .fontWeight(.bold)
                     .foregroundColor(Color.red)
                     .opacity(isButtonClicked ? 1 : 0)
@@ -51,6 +62,7 @@ struct FirstViewController: View {
                 
                 Button{
                     guard emailAddress != "" && emailPassword != "" else {
+                        errorText = "The following text fields should be filled."
                         isButtonClicked = true
                         print("clicked")
                         return
@@ -58,9 +70,10 @@ struct FirstViewController: View {
                     Auth.auth().signIn(withEmail: emailAddress, password: emailPassword) { authResult, error in
                         if error != nil {
                             print(String(describing: error))
-                            path.append(1)
+                            navigationPath.append(VCToPresent.signup)
+                        } else {
+                            navigationPath.append(VCToPresent.login)
                         }
-                        
                     }
                 } label: {
                     Label("Sign in or sign up", systemImage: "shield.lefthalf.filled")
@@ -70,8 +83,13 @@ struct FirstViewController: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .padding(.horizontal, 25)
-                .navigationDestination(for: Int.self) { _ in
-                    CreateAccountViewController()
+                .navigationDestination(for: VCToPresent.self) { destination in
+                    switch destination {
+                    case .login:
+                        MainViewController()
+                    case .signup:
+                        CreateAccountViewController()
+                    }
                 }
                 //            ============ Nav Bar Styles  ============
                 .navigationTitle("iShop")
@@ -82,5 +100,5 @@ struct FirstViewController: View {
 
 
 #Preview {
-    FirstViewController().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    AccountViewController().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }

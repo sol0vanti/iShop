@@ -12,8 +12,48 @@ import FirebaseFirestore
 import FirebaseAuth
 
 struct CreateAccountViewController: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    var email: String
+    @State private var password: String = ""
+    @State private var confirmPassword: String = ""
+    @State private var errorText: String = ""
+    @State private var isButtonClicked: Bool = false
+    
     var body: some View {
-        Text("Don't have an account?")
+        VStack {
+            Text(email)
+            SecureField("Password", text: $password)
+                .textFieldStyle(.roundedBorder)
+                .font(.headline)
+                .padding(.horizontal, 25)
+                .autocorrectionDisabled()
+                .textInputAutocapitalization(.never)
+            SecureField("Confirm Password", text: $confirmPassword)
+                .textFieldStyle(.roundedBorder)
+                .font(.headline)
+                .padding(.horizontal, 25)
+                .padding(.top, 15)
+                .autocorrectionDisabled()
+                .textInputAutocapitalization(.never)
+                
+            Text(errorText)
+                .fontWeight(.bold)
+                .foregroundColor(Color.red)
+                .opacity(isButtonClicked ? 1 : 0)
+                .padding(.top, 15)
+                
+            Button{
+                
+            } label: {
+                Label("Create new account", systemImage: "person.circle.fill")
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 25)
+                    .font(.headline)
+            }
+            .buttonStyle(.borderedProminent)
+            .padding(.horizontal, 25)
+        }
+        .navigationTitle("Don't have an account?")
     }
 }
 
@@ -88,7 +128,7 @@ struct AccountViewController: View {
                     case .login:
                         MainViewController()
                     case .signup:
-                        CreateAccountViewController()
+                        CreateAccountViewController(email: emailAddress)
                     }
                 }
                 //            ============ Nav Bar Styles  ============

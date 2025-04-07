@@ -27,8 +27,24 @@
 		7065CAA22DA1437E00B43AE4 /* iShop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iShop.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+<<<<<<< HEAD
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		70483A6B2DA433E30034171F /* Assets */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Assets; sourceTree = "<group>"; };
+=======
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		70483A6C2DA433E80034171F /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				"GoogleService-Info.plist",
+			);
+			target = 7065CA922DA1437C00B43AE4 /* iShop */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		70483A6B2DA433E30034171F /* Assets */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (70483A6C2DA433E80034171F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Assets; sourceTree = "<group>"; };
+>>>>>>> testing-branch
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
